@@ -13,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@babel/parser": "^7.18.9",
     "@emotion/babel-plugin": "^11.9.2",
     "@emotion/react": "^11.9.3",
     "babel-jest": "^28.1.3",

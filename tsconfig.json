@@ -28,8 +28,11 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-, "@yuer/label-plugin-access-control", "jest.config.js"  ],
+    "src",
+    "@yuer/label-plugin-access-control",
+    "jest.config.js",
+    "@yuer/babel-demo/babel-demo.js"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

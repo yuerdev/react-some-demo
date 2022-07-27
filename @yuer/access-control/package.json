@@ -2,10 +2,7 @@
     "name": "@yuer/access-control",
     "version": "0.1.0",
     "dependencies": {
-        "@querycap/access": "*",
-        "@querycap/request": "*",
-        "lodash": "*",
-        "@reactorx/request":"*"
+        "lodash": "*"
     },
     "files": [
         "dist/"
