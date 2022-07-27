@@ -32,7 +32,7 @@ const isAccessControlComponentOrHook = (id: string) => isAccessControlEveryCompo
 
 //获取替代的import和高阶函数名
 const resolveOpts = (opts: State["opts"] = {} as any) => ({
-  libAccessControl: opts.libAccessControl || "@querycap/access",
+  libAccessControl: opts.libAccessControl || "@yuer/access-control",
   methodAccessControlSome: opts.methodAccessControlSome || "mustOneOfPermissions",
   methodAccessControlEvery: opts.methodAccessControlEvery || "mustAllOfPermissions",
 });
