@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`babel-plugin-access-control-autocomplete should mark mixed 1`] = `
+"
+
+export const AcComponent = () => {
+  useRequest(putApp, {});
+  useTempDataForRequest(listApp, {})
+  return <AcComponent2 />;
+};
+
+    
+↓ ↓ ↓ ↓ ↓ ↓
+
+import { mustAllOfPermissions as _mustAllOfPermissions } from \\"@querycap/access\\";
+export const AcComponent = _mustAllOfPermissions(AcComponent2, listApp, putApp)(() => {
+  useRequest(putApp, {});
+  useTempDataForRequest(listApp, {});
+  return <AcComponent2 />;
+}, false, \\"AcComponent\\");  
+"
+`;
