@@ -1,15 +1,19 @@
 const { transformFileSync } = require('@babel/core');
-const insertParametersPlugin = require('../babel-demo');
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import insertParametersPlugin from '..';
 const path = require('path');
 
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 describe("babel-demo", () => {
     it("babel-demo", () => {
         const { code } = transformFileSync(path.join(__dirname, './sourceCode.js'), {
-            plugins: [insertParametersPlugin],
+            root: __dirname,
             parserOpts: {
-                sourceType: 'unambiguous',
                 plugins: ['jsx']
-            }
+            },
+            plugins: [insertParametersPlugin],
         });
 
         expect(code).toMatchSnapshot();
