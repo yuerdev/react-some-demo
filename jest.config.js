@@ -6,7 +6,7 @@ export default {
   },
   "moduleNameMapper": {
     "^@yuer/([^/]+)$": "<rootDir>/@yuer/$1/index.ts",
-    "chalk": "chalk/source/index.js",
+    // "chalk": "chalk/source/index.js",
     "#ansi-styles": "chalk/source/vendor/ansi-styles/index.js",
     "#supports-color": "chalk/source/vendor/supports-color/index.js"
   },

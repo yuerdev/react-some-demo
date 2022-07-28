@@ -31,7 +31,7 @@
     "src",
     "@yuer/label-plugin-access-control",
     "jest.config.js",
-    "@yuer/babel-demo/babel-demo.js"
+    "@yuer/babel-demo/babel-demo.ts"
   ],
   "references": [
     {

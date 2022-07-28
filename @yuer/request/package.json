@@ -1,14 +1,10 @@
 {
-  "name": "@yuer/babel-demo",
+  "name": "@yuer/request",
   "version": "0.1.0",
   "peerDependencies": {
-    "@babel/parser": "^7.18.9",
-    "@babel/runtime-corejs3": "*",
-    "@babel/types": "7.x"
   },
   "dependencies": {
-    "@babel/generator": "^7.18.9",
-    "@babel/helper-module-imports": "^7.16.7"
+    "axios": "^0.27.2"
   },
   "files": [
     "dist/"
@@ -23,8 +19,5 @@
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "devDependencies": {
-    "@babel/template": "^7.18.6"
-  }
+  "module": "./dist/index.mjs"
 }

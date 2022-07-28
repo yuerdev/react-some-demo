@@ -1,38 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`babel-demo should mark mixed 1`] = `
-"console.log(\\"fileinfo:(2:4) --\\", 1);
+"console.log('filename:2,4:')
+console.log(1);
 
 function func() {
-  console.info(\\"fileinfo:(5:8) --\\", 2);
-}
-
-export default class Clazz {
-  say() {
-    console.debug(\\"fileinfo:(10:12) --\\", 3);
-  }
-
-  render() {
-    return <div>{console.error(\\"fileinfo:(13:25) --\\", 4)}</div>;
-  }
-
-}"
-`;
-
-exports[`babel-plugin-access-control-autocomplete should mark mixed 1`] = `
-"console.log(1);
-
-function func() {
+  console.log('filename:5,8:')
   console.info(2);
 }
 
 export default class Clazz {
   say() {
+    console.log('filename:10,12:')
     console.debug(3);
   }
 
   render() {
-    return <div>{console.error(4)}</div>;
+    return <div>{[console.log('filename:13,25:'), console.error(4)]}</div>;
   }
 
 }"
