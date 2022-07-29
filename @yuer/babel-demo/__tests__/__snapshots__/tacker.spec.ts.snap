@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tracker auto tracker 1`] = `
+"import _objectObject from \\"tracker\\";
+import aa from 'aa';
+import * as bb from 'bb';
+import { cc } from 'cc';
+import 'dd';
+
+function a() {
+  _objectObject();
+
+  console.log('aaa');
+}
+
+class B {
+  bb() {
+    _objectObject();
+
+    return 'bbb';
+  }
+
+}
+
+const c = () => {
+  _objectObject();
+
+  return 'ccc';
+};
+
+const d = function () {
+  _objectObject();
+
+  console.log('ddd');
+};"
+`;
