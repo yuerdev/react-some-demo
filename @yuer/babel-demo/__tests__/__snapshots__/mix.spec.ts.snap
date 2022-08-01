@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mix test mix 1`] = `
+"
+
+        function func() {
+            const num1 = 1;
+            const num2 = 2;
+            const num3 = /*@__PURE__*/add(1, 2);
+            const num4 = add(3, 4);
+            console.log(num2);
+            return num2;
+            console.log(num1);
+            function add (aaa, bbb) {
+                return aaa + bbb;
+            }
+        }
+        func();
+    
+    
+↓ ↓ ↓ ↓ ↓ ↓
+
+function _h() {
+  const _c = 1;
+  const _d = 2;
+
+  const _e = /*@__PURE__*/_g(1, 2);
+
+  const _f = _g(3, 4);
+
+  console.log(_d);
+  return _d;
+  console.log(_c);
+
+  function _g(_a, _b) {
+    return _a + _b;
+  }
+}
+
+_h();  
+"
+`;
