@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tracker auto tracker 1`] = `
-"import _tracker2 from \\"tracker\\";
-import aa from 'aa';
+"import aa from 'aa';
 import * as bb from 'bb';
 import { cc } from 'cc';
 import 'dd';

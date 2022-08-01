@@ -25,7 +25,6 @@ export default (api: any, options: any) => {
                         state.trackerImportId = addDefault(path, 'tracker', {
                             nameHint: path.scope.generateUidIdentifier('tracker')
                         }).name;// tracker的模拟id
-                        console.info(state.trackerImportId, '==')
                         state.trackerAST = api.template.statement(`${state.trackerImportId}()`)()//
                     }
                 }

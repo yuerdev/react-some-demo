@@ -11,17 +11,16 @@ export default (_, option) => {
                         ImportDeclaration(currPath: NodePath<ImportDeclaration>) {
                             const importPath = (currPath.get('resource') as any).value;
                             if (importPath == option.stackerPath) {
-                                console.info(currPath.get('specifiers.0'))
-                                const specifierPath = currPath.get('specifiers.0');
+                                const specifierPath = currPath.get('specifiers.0') as any;
                                 if (isImportSpecifier(specifierPath)) {
-                                    state.trackerTemplateID =importPath;
+                                    state.trackerTemplateID =specifierPath.toString();
                                 } else if (isImportNamespaceSpecifier(specifierPath)) {
-                                    state.trackerTemplateID = importPath
+                                    state.trackerTemplateID = specifierPath.get('local').toString()
                                 }
                                 path.stop();
                             }
                         }
-                    })
+                    });
                     if (!state.trackerTemplateID) {
                         state.templateID = addDefault(path, 'tracker', {
                             nameHint: path.scope.generateUid('tracker')
