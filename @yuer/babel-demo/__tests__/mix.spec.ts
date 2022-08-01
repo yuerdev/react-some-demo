@@ -1,7 +1,7 @@
 import { transformSync } from "@babel/core";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import MixZip from "../mix";
+import Mix from "../mix";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -11,7 +11,7 @@ const compileToSnapshot = (code: string) => {
         parserOpts: {
             plugins: ["jsx"],
         },
-        plugins: [[MixZip]],
+        plugins: [[Mix]],
     });
 
     return `

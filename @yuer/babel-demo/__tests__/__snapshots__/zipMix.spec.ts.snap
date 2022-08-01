@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`zip mix test zip mix 1`] = `
+"
+
+        function func() {
+            const num1 = 1;
+            const num2 = 2;
+            const num3 = /*@__PURE__*/add(1, 2);
+            const num4 = add(3, 4);
+            console.log(num2);
+            return num2;
+            console.log(num1);
+            function add (aaa, bbb) {
+                return aaa + bbb;
+            }
+        }
+        func();
+    
+    
+↓ ↓ ↓ ↓ ↓ ↓
+
+function _g(){const _c=1;const _d=2;_f(3,4);console.log(_d);return _d;function _f(_a,_b){return _a+_b;}}_g();  
+"
+`;

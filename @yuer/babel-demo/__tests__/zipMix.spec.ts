@@ -1,6 +1,7 @@
 import { transformSync } from "@babel/core";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import Mix from "../mix";
 import Zip from "../zip";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -11,7 +12,11 @@ const compileToSnapshot = (code: string) => {
         parserOpts: {
             plugins: ["jsx"],
         },
-        plugins: [[Zip]],
+        plugins: [[Zip], [Mix]],
+        generatorOpts: {
+            comments: false,
+            compact: true
+        }
     });
 
     return `
@@ -23,8 +28,8 @@ ${t?.code}
 `;
 };
 
-describe("zip test", () => {
-    it("zip", () => {
+describe("zip mix test", () => {
+    it("zip mix", () => {
         const result = compileToSnapshot(`
         function func() {
             const num1 = 1;
@@ -43,5 +48,5 @@ describe("zip test", () => {
 
         expect(result).toMatchSnapshot();
     });
-    
+
 });
